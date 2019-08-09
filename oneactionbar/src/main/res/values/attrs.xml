@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OneActionBar">
+        <attr name="barBackColor" format="color"></attr>
+        <attr name="barBackIconWidth" format="dimension"></attr>
+        <attr name="barBackIconHeight" format="dimension"></attr>
+        <attr name="barBackText" format="string"></attr>
+        <attr name="barBackTextSize" format="dimension"></attr>
+        <attr name="barTitle" format="string"></attr>
+        <attr name="barTitleColor" format="color"></attr>
+        <attr name="barTitleSize" format="dimension"></attr>
+        <attr name="barType" format="enum">
+            <enum name="TYPE_NORMAL" value="1"></enum>
+            <enum name="TYPE_BACK" value="2"></enum>
+            <enum name="TYPE_SEARCH" value="3"></enum>
+            <enum name="TYPE_BACK_SEARCH" value="4"></enum>
+        </attr>
+        <attr name="barActionBtnColor" format="color"></attr>
+        <attr name="barActionBtnText" format="string"></attr>
+        <attr name="barActionBtnTextSize" format="dimension"></attr>
+        <attr name="barBottomLineWidth" format="dimension"></attr>
+        <attr name="barBottomLineColor" format="color"></attr>
+        <attr name="barActionBrnIcon" format="reference"></attr>
+        <attr name="barActionBtnIconWidth" format="dimension"></attr>
+        <attr name="barActionBtnIconHeight" format="dimension"></attr>
+        <attr name="barSearchBackground" format="reference"></attr>
+        <attr name="barSearchHint" format="string"></attr>
+        <attr name="barSearchText" format="string"></attr>
+        <attr name="barSearchHintColor" format="color"></attr>
+        <attr name="barSearchTextColor" format="color"></attr>
+        <attr name="barSearchTextSize" format="dimension"></attr>
+    </declare-styleable>
+</resources>

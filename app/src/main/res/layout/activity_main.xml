@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rootView"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <cn.onestravel.one.actionbar.OneActionBar
+            android:id="@+id/oneActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:barBackColor="@android:color/white"
+            app:barType="TYPE_SEARCH"
+            app:barTitle="首页"
+            app:barActionBrnIcon="@mipmap/back"
+            app:barTitleColor="@android:color/white"
+            android:background="@color/colorPrimaryDark"
+    ></cn.onestravel.one.actionbar.OneActionBar>
+</LinearLayout>
