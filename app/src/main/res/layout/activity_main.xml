@@ -9,11 +9,12 @@
             android:id="@+id/oneActionBar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            app:barBackColor="@android:color/white"
-            app:barType="TYPE_SEARCH"
+            app:barType="TYPE_BACK"
             app:barTitle="首页"
-            app:barActionBrnIcon="@mipmap/back"
-            app:barTitleColor="@android:color/white"
-            android:background="@color/colorPrimaryDark"
+            app:barBackText="返回"
+            app:barActionBtnText="确认"
+            app:barActionBtnColor="#0080ff"
+            app:barActionBtnTextSize="16sp"
+            android:background="@android:color/white"
     ></cn.onestravel.one.actionbar.OneActionBar>
 </LinearLayout>

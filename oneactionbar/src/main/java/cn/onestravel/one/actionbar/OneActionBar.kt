@@ -1,6 +1,7 @@
 package cn.onestravel.one.actionbar
 
 import android.app.Activity
+import android.app.StatusBarManager
 import android.content.Context
 import android.content.Context.INPUT_METHOD_SERVICE
 import android.content.res.ColorStateList
@@ -19,6 +20,7 @@ import android.view.KeyEvent
 import android.view.View
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
@@ -463,18 +465,20 @@ public class OneActionBar @JvmOverloads constructor(
         }
 
         mActionBtnIconDrawable?.let {
-            mActionBtnIconView.layoutParams = mActionBtnIconViewParams
-            mActionBtnIconViewParams.width = mActionBtnIconWidth
-            mActionBtnIconViewParams.height = mActionBtnIconHeight
-            mActionBtnIconViewParams.leftMargin = dp2px(5f)
-            mActionBtnIconViewParams.rightMargin = dp2px(5f)
-            mActionBtnIconView.setImageDrawable(it)
-            mActionBtnLayout.removeView(mActionBtnIconView)
-            mActionBtnLayout.addView(mActionBtnIconView)
+            if (mActionBtnIconHeight > 5 && mActionBtnIconWidth > 5) {
+                mActionBtnIconView.layoutParams = mActionBtnIconViewParams
+                mActionBtnIconViewParams.width = mActionBtnIconWidth
+                mActionBtnIconViewParams.height = mActionBtnIconHeight
+                mActionBtnIconViewParams.leftMargin = dp2px(5f)
+                mActionBtnIconViewParams.rightMargin = dp2px(5f)
+                mActionBtnIconView.setImageDrawable(it)
+                mActionBtnLayout.removeView(mActionBtnIconView)
+                mActionBtnLayout.addView(mActionBtnIconView)
+            }
         }
         mActionBtnText?.let {
-            mActionBtnTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, mBackTextSize)
-            mActionBtnTextView.setTextColor(mBackColor)
+            mActionBtnTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, mActionBtnTextSize)
+            mActionBtnTextView.setTextColor(mActionBtnColor)
             mActionBtnTextView.text = it
             mActionBtnTextView.setPadding(0, 0, 0, 0)
             mActionBtnLayout.removeView(mActionBtnTextView)
@@ -570,6 +574,14 @@ public class OneActionBar @JvmOverloads constructor(
      * 重置子View宽度
      */
     private fun resetChildLayoutWidth() {
+        if (mActionBtnLayout.childCount == 0) {
+            mActionBtnLayoutParams.width = mBackLayout.measuredWidth
+        }
+        val spaceLayoutParams = LayoutParams(0, WRAP_CONTENT)
+        mSpaceView.layoutParams = spaceLayoutParams
+        if (mType == Type.TYPE_SEARCH || mType == Type.TYPE_BACK_SEARCH) {
+            return
+        }
         //获取左右可点击区域的最小宽度
         val minWidth = if (mType == Type.TYPE_SEARCH) {
             dp2px(10f)
@@ -600,8 +612,7 @@ public class OneActionBar @JvmOverloads constructor(
         }
         //计算空白view的宽度
         val spaceWidth = width - backLayoutWidth
-        val spaceLayoutParams = LayoutParams(spaceWidth, WRAP_CONTENT)
-        mSpaceView.layoutParams = spaceLayoutParams
+        spaceLayoutParams.width = spaceWidth
         mActionBtnLayoutParams.width = width
         mBackLayoutParams.width = backLayoutWidth
     }
@@ -614,6 +625,7 @@ public class OneActionBar @JvmOverloads constructor(
         val scale = resources.displayMetrics.density
         return (dpValue * scale + 0.5f).toInt()
     }
+
     /**
      * 根据手机的分辨率从 sp 的单位 转成为 px(像素)
      */
