@@ -574,7 +574,7 @@ public class OneActionBar @JvmOverloads constructor(
      * 重置子View宽度
      */
     private fun resetChildLayoutWidth() {
-        if (mActionBtnLayout.childCount == 0) {
+        if (mType == Type.TYPE_SEARCH && mActionBtnLayout.childCount == 0) {
             mActionBtnLayoutParams.width = mBackLayout.measuredWidth
         }
         val spaceLayoutParams = LayoutParams(0, WRAP_CONTENT)
