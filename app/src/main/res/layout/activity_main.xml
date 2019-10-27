@@ -1,15 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/rootView"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#e1e1e1"
+        android:paddingTop="30dp"
         android:orientation="vertical">
+
     <cn.onestravel.one.actionbar.OneActionBar
-            android:id="@+id/oneActionBar"
+            style="@style/OneActionBar.Normal"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            app:barTitle="首页"
+            android:background="@android:color/white"
+            app:barTitle="首页" />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="OneActionBar.Normal"
+            android:textSize="15dp" />
+
+    <cn.onestravel.one.actionbar.OneActionBar
+            android:id="@+id/oneActionBar"
+            style="@style/OneActionBar.Normal.Blue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:barTitle="首页" />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="OneActionBar.Normal.Blue"
+            android:textSize="15dp" />
+
+    <cn.onestravel.one.actionbar.OneActionBar
+            style="@style/OneActionBar.Back"
+            android:layout_width="match_parent"
+            android:background="@android:color/white"
+            android:layout_height="50dp"
+            app:barTitle="首页" />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="OneActionBar.Back"
+            android:textSize="15dp" />
+
+    <cn.onestravel.one.actionbar.OneActionBar
             style="@style/OneActionBar.Back.Blue"
-    ></cn.onestravel.one.actionbar.OneActionBar>
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:barTitle="首页" />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="OneActionBar.Back.Blue"
+            android:textSize="15dp" />
+
+    <cn.onestravel.one.actionbar.OneActionBar
+            style="@style/OneActionBar.Search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            app:barTitle="首页" />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="OneActionBar.Search"
+            android:textSize="15dp" />
+
+    <cn.onestravel.one.actionbar.OneActionBar
+            style="@style/OneActionBar.Search.Blue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:barTitle="首页" />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="OneActionBar.Search.Blue"
+            android:textSize="15dp" />
+
+    <cn.onestravel.one.actionbar.OneActionBar
+            style="@style/OneActionBar.Back.Search"
+            android:layout_width="match_parent"
+            android:background="@android:color/white"
+            android:layout_height="50dp"
+            app:barTitle="首页" />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="OneActionBar.Back.Search"
+            android:textSize="15dp" />
+
+    <cn.onestravel.one.actionbar.OneActionBar
+            style="@style/OneActionBar.Back.Search.Blue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:barTitle="首页" />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:text="OneActionBar.Back.Search.Blue"
+            android:textSize="15dp" />
 </LinearLayout>

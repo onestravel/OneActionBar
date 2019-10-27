@@ -1,7 +1,6 @@
 package cn.onestravel.one.actionbar
 
 import android.app.Activity
-import android.app.StatusBarManager
 import android.content.Context
 import android.content.Context.INPUT_METHOD_SERVICE
 import android.content.res.ColorStateList
@@ -20,7 +19,6 @@ import android.view.KeyEvent
 import android.view.View
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
-import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
@@ -352,7 +350,7 @@ public class OneActionBar @JvmOverloads constructor(
         mActionBtnTextSize = arr.getDimension(R.styleable.OneActionBar_barActionBtnTextSize, sp2px(12f).toFloat())
         mBottomLineWidth = arr.getDimension(R.styleable.OneActionBar_barBottomLineWidth, 0f)
         mBottomLineColor = arr.getColor(R.styleable.OneActionBar_barBottomLineColor, Color.DKGRAY)
-        mActionBtnIconDrawable = arr.getDrawable(R.styleable.OneActionBar_barActionBrnIcon)
+        mActionBtnIconDrawable = arr.getDrawable(R.styleable.OneActionBar_barActionBtnIcon)
         mActionBtnIconWidth = arr.getDimension(R.styleable.OneActionBar_barActionBtnIconWidth, 0f).toInt()
         mActionBtnIconHeight = arr.getDimension(R.styleable.OneActionBar_barActionBtnIconHeight, 0f).toInt()
         mSearchBackground = arr.getDrawable(R.styleable.OneActionBar_barSearchBackground)

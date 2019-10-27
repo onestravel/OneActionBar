@@ -20,7 +20,7 @@
         <attr name="barActionBtnTextSize" format="dimension"></attr>
         <attr name="barBottomLineWidth" format="dimension"></attr>
         <attr name="barBottomLineColor" format="color"></attr>
-        <attr name="barActionBrnIcon" format="reference"></attr>
+        <attr name="barActionBtnIcon" format="reference"></attr>
         <attr name="barActionBtnIconWidth" format="dimension"></attr>
         <attr name="barActionBtnIconHeight" format="dimension"></attr>
         <attr name="barSearchBackground" format="reference"></attr>
