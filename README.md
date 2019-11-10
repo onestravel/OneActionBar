@@ -19,7 +19,7 @@
 3. With return key header, transparent background ``style="@style/OneActionBar.Back"``
 4. With the return key head, blue background ``style="@style/OneActionBar.Back.Blue"``
 5. With search box header, transparent background ``style="@style/OneActionBar.Search"``
-6. With search box header, blue background ``style="@style/OneActionBar.Search.Blue"
+6. With search box header, blue background ``style="@style/OneActionBar.Search.Blue"``
 7. Search box with return key header, transparent background ``style="@style/OneActionBar.Back.Search"``
 8. Search box with return key header, blue background ``style="@style/OneActionBar.Back.Search.Blue"``
 

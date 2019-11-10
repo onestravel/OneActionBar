@@ -18,7 +18,7 @@
 3. 带返回键标题头，透明背景 ``style="@style/OneActionBar.Back"``
 4. 带返回键标题头，蓝色背景 ``style="@style/OneActionBar.Back.Blue"``
 5. 带搜索框标题头，透明背景 ``style="@style/OneActionBar.Search"``
-6. 带搜索框标题头，蓝色背景 ``style="@style/OneActionBar.Search.Blue"
+6. 带搜索框标题头，蓝色背景 ``style="@style/OneActionBar.Search.Blue"``
 7. 搜索框带返回键标题头，透明背景 ``style="@style/OneActionBar.Back.Search"``
 8. 搜索框带返回键标题头，蓝色背景 ``style="@style/OneActionBar.Back.Search.Blue"``
 
