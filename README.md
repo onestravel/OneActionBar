@@ -1,22 +1,4 @@
----
-Title: OneActionBar generic header
-Author: a person's travel
-Img: /images/20190130/oneactionBar.png
-Top: 'false' # If the top value is true, it will be the home page recommendation article
-Cover: true
-coverImg: /images/20190130/bottomnavigationbar.png
-Summary: >-
-  Custom ActionBar, support properties, java code mode configuration, can implement title, title with return key, search, search for ActionBar with return key.
-Mathjax: false
-Categories:
-  - Android/NDK
-Tags:
-  - Android/NDK
-  - one-extend-lib
-Abbrlink: 7d8679a7
-Date: 2019-08-25 10:00:00
 
----
 
 # [OneActionBar](https://github.com/onestravel/OneActionBar) Instructions for use
 

@@ -1,21 +1,4 @@
----
-title: OneActionBar 通用标题头
-author: 一个人的旅行
-img: /images/20190130/oneactionBar.png
-top: 'false' # 如果top值为true，则会是首页推荐文章
-cover: true
-coverImg: /images/20190130/bottomnavigationbar.png
-summary: >-
-  自定义ActionBar，支持属性，java代码方式配置，可实现标题，标题带返回键，搜索，搜索带返回键的ActionBar。
-mathjax: false
-categories:
-  - Android/NDK
-tags:
-  - Android/NDK
-  - one-extend-lib
-abbrlink: 7d8679a7
-date: 2019-08-25 10:00:00
----
+
 
 # [OneActionBar](https://github.com/onestravel/OneActionBar) 使用说明
 
