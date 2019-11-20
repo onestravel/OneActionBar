@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/OneActionBar.iml" filepath="$PROJECT_DIR$/.idea/OneActionBar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/OneActionBar-app.iml" filepath="$PROJECT_DIR$/app/OneActionBar-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oneactionbar/OneActionBar-oneactionbar.iml" filepath="$PROJECT_DIR$/oneactionbar/OneActionBar-oneactionbar.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/oneactionbar/oneactionbar.iml" filepath="$PROJECT_DIR$/oneactionbar/oneactionbar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onestravelSpace-OneActionBar.iml" filepath="$PROJECT_DIR$/onestravelSpace-OneActionBar.iml" />
     </modules>
   </component>
 </project>

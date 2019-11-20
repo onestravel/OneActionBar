@@ -27,6 +27,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat.*
 import androidx.core.graphics.drawable.DrawableCompat
 import com.example.actionbar.R
@@ -57,12 +58,27 @@ public class OneActionBar @JvmOverloads constructor(
     private val mTitleView: TextView by lazy { TextView(context) }
     private val mTitleLayoutParams: LayoutParams by lazy { LayoutParams(0, MATCH_PARENT, 2f) }
     private val mActionBtnLayout: LinearLayout by lazy { LinearLayout(context) }
-    private val mActionBtnLayoutParams: LayoutParams by lazy { LayoutParams(WRAP_CONTENT, MATCH_PARENT) }
+    private val mActionBtnLayoutParams: LayoutParams by lazy {
+        LayoutParams(
+            WRAP_CONTENT,
+            MATCH_PARENT
+        )
+    }
     private val mBackIconView: ImageView by lazy { ImageView(context) }
-    private val mBackIconViewParams: LayoutParams by lazy { LayoutParams(WRAP_CONTENT, WRAP_CONTENT) }
+    private val mBackIconViewParams: LayoutParams by lazy {
+        LayoutParams(
+            WRAP_CONTENT,
+            WRAP_CONTENT
+        )
+    }
     private val mBackTextView: TextView by lazy { TextView(context) }
     private val mActionBtnIconView: ImageView by lazy { ImageView(context) }
-    private val mActionBtnIconViewParams: LayoutParams by lazy { LayoutParams(WRAP_CONTENT, WRAP_CONTENT) }
+    private val mActionBtnIconViewParams: LayoutParams by lazy {
+        LayoutParams(
+            WRAP_CONTENT,
+            WRAP_CONTENT
+        )
+    }
     private val mActionBtnTextView: TextView by lazy { TextView(context) }
     private val mSpaceView: View by lazy { View(context) }
     private val mBackIconDrawable: Drawable by lazy {
@@ -101,7 +117,7 @@ public class OneActionBar @JvmOverloads constructor(
     /**
      * 右侧点击区域按钮图标
      */
-    var actionBtnIconDrawable: Drawable? = null
+    var barActionBtnIconDrawable: Drawable? = null
         set(value) {
             this.mActionBtnIconDrawable = value
             resetLayout()
@@ -109,7 +125,7 @@ public class OneActionBar @JvmOverloads constructor(
     /**
      * ActionBar 底部线条颜色
      */
-    var bottomLineColor: Int = 0
+    var barBottomLineColor: Int = 0
         set(value) {
             this.mBottomLineColor = value
             postInvalidate()
@@ -117,7 +133,7 @@ public class OneActionBar @JvmOverloads constructor(
     /**
      * ActionBar 底部线条宽度
      */
-    var bottomLineWidth: Float = 0.0f
+    var barBottomLineWidth: Float = 0.0f
         set(value) {
             this.mBottomLineWidth = value
             postInvalidate()
@@ -125,7 +141,7 @@ public class OneActionBar @JvmOverloads constructor(
     /**
      * 右侧点击区域按钮文字大小
      */
-    var actionBtnTextSize: Float = 0.0f
+    var barActionBtnTextSize: Float = 0.0f
         set(value) {
             this.mActionBtnTextSize = value
             mActionBtnTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, mActionBtnTextSize)
@@ -133,7 +149,7 @@ public class OneActionBar @JvmOverloads constructor(
     /**
      * 右侧点击区域按钮文字颜色
      */
-    var actionBtnColor: Int = 0
+    var barActionBtnColor: Int = 0
         set(value) {
             this.mActionBtnColor = value
             mActionBtnTextView.setTextColor(mActionBtnColor)
@@ -141,7 +157,7 @@ public class OneActionBar @JvmOverloads constructor(
     /**
      * 右侧点击区域按钮文字
      */
-    var actionBtnText: String? = null
+    var barActionBtnText: String? = null
         set(value) {
             this.mActionBtnText = value
             resetLayout()
@@ -153,16 +169,33 @@ public class OneActionBar @JvmOverloads constructor(
      * Type.TYPE_NORMAL
      * Type.TYPE_SEARCH
      */
-    var type: String? = null
+    var barType: String? = null
         set(value) {
             this.mType = value
             resetLayout()
         }
 
     /**
+     * 标题文字
+     */
+    var barTitle: String? = null
+        set(value) {
+            this.mTitle = value
+            mTitleView.setText(mTitle ?: "")
+        }
+    /**
+     * 标题文字
+     */
+    @StringRes
+    var barTitleRes: Int = 0
+        set(value) {
+            this.mTitle = context.getString(value)
+            mTitleView.setText(value)
+        }
+    /**
      * 标题文字大小
      */
-    var titleSize: Float = 0.0f
+    var barTitleSize: Float = 0.0f
         set(value) {
             this.mTitleSize = value
             mTitleView.setTextSize(TypedValue.COMPLEX_UNIT_PX, mTitleSize)
@@ -170,7 +203,7 @@ public class OneActionBar @JvmOverloads constructor(
     /**
      * 标题文字颜色
      */
-    var titleColor: Int = 0
+    var barTitleColor: Int = 0
         set(value) {
             this.mTitleColor = value
             mTitleView.setTextColor(mTitleColor)
@@ -178,7 +211,7 @@ public class OneActionBar @JvmOverloads constructor(
     /**
      * 返回键文字大小
      */
-    var backTextSize: Float = 0.0f
+    var barBackTextSize: Float = 0.0f
         set(value) {
             this.mBackTextSize = value
             mBackTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, mBackTextSize)
@@ -186,7 +219,7 @@ public class OneActionBar @JvmOverloads constructor(
     /**
      * 返回键文字
      */
-    var backText: String? = null
+    var barBackText: String? = null
         set(value) {
             this.mBackText = value
             resetLayout()
@@ -194,7 +227,7 @@ public class OneActionBar @JvmOverloads constructor(
     /**
      * 返回键按钮，文字颜色
      */
-    var backColor: Int = Color.BLACK
+    var barBackColor: Int = Color.BLACK
         set(value) {
             mBackColor = value
             changeBackColor()
@@ -204,7 +237,7 @@ public class OneActionBar @JvmOverloads constructor(
     /**
      * 搜索框背景
      */
-    var searchBackground: Drawable? = null
+    var barSearchBackground: Drawable? = null
         set(value) {
             mSearchBackground = value
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
@@ -216,7 +249,7 @@ public class OneActionBar @JvmOverloads constructor(
     /**
      * 搜索框提示文字
      */
-    var searchHint: String? = null
+    var barSearchHint: String? = null
         set(value) {
             mSearchHint = value
             mSearchView.hint = mSearchHint
@@ -224,7 +257,7 @@ public class OneActionBar @JvmOverloads constructor(
     /**
      * 搜索框文字
      */
-    var searchText: String? = null
+    var barSearchText: String? = null
         set(value) {
             mSearchText = value
             mSearchView.setText(mSearchText)
@@ -232,7 +265,7 @@ public class OneActionBar @JvmOverloads constructor(
     /**
      * 搜索框提示文字颜色
      */
-    var searchHintColor: Int = Color.DKGRAY
+    var barSearchHintColor: Int = Color.DKGRAY
         set(value) {
             mSearchHintColor = value
             mSearchView.setHintTextColor(mSearchHintColor)
@@ -240,7 +273,7 @@ public class OneActionBar @JvmOverloads constructor(
     /**
      * 搜索框文字颜色
      */
-    var searchTextColor: Int = Color.BLACK
+    var barSearchTextColor: Int = Color.BLACK
         set(value) {
             mSearchTextColor = value
             mSearchView.setTextColor(mSearchTextColor)
@@ -248,7 +281,7 @@ public class OneActionBar @JvmOverloads constructor(
     /**
      * 搜索框文字大小
      */
-    var searchTextSize: Float = sp2px(16f).toFloat()
+    var barSearchTextSize: Float = sp2px(16f).toFloat()
         set(value) {
             mSearchTextSize = value
             mSearchView.setTextSize(TypedValue.COMPLEX_UNIT_PX, mBackTextSize)
@@ -258,10 +291,10 @@ public class OneActionBar @JvmOverloads constructor(
      * 搜索框背景
      * @param drawableId 资源文件id
      */
-    fun setSearchBackgroundResources(@DrawableRes drawableId: Int) {
+    fun barSetSearchBackgroundResources(@DrawableRes drawableId: Int) {
         val drawable = getDrawable(context, drawableId)
         drawable?.let {
-            searchBackground = drawable
+            barSearchBackground = drawable
         }
     }
 
@@ -289,7 +322,7 @@ public class OneActionBar @JvmOverloads constructor(
      * 返回键按钮，文字颜色
      */
     fun setBackColorResource(@ColorRes colorRes: Int) {
-        backColor = getColor(context, colorRes)
+        barBackColor = getColor(context, colorRes)
     }
 
     /**
@@ -334,10 +367,13 @@ public class OneActionBar @JvmOverloads constructor(
     private fun initAttr(context: Context?, attrs: AttributeSet?) {
         var arr: TypedArray = context!!.obtainStyledAttributes(attrs, R.styleable.OneActionBar)
         mBackColor = arr.getColor(R.styleable.OneActionBar_barBackColor, Color.BLACK)
-        mBackIconWidth = arr.getDimension(R.styleable.OneActionBar_barBackIconWidth, dp2px(15f).toFloat())
-        mBackIconHeight = arr.getDimension(R.styleable.OneActionBar_barBackIconHeight, dp2px(15f).toFloat())
+        mBackIconWidth =
+            arr.getDimension(R.styleable.OneActionBar_barBackIconWidth, dp2px(15f).toFloat())
+        mBackIconHeight =
+            arr.getDimension(R.styleable.OneActionBar_barBackIconHeight, dp2px(15f).toFloat())
         mBackText = arr.getString(R.styleable.OneActionBar_barBackText)
-        mBackTextSize = arr.getDimension(R.styleable.OneActionBar_barBackTextSize, sp2px(14f).toFloat())
+        mBackTextSize =
+            arr.getDimension(R.styleable.OneActionBar_barBackTextSize, sp2px(14f).toFloat())
         mTitle = arr.getString(R.styleable.OneActionBar_barTitle)
         mTitleColor = arr.getColor(R.styleable.OneActionBar_barTitleColor, Color.BLACK)
         mTitleSize = arr.getDimension(R.styleable.OneActionBar_barTitleSize, sp2px(20f).toFloat())
@@ -347,21 +383,26 @@ public class OneActionBar @JvmOverloads constructor(
         }
         mActionBtnColor = arr.getColor(R.styleable.OneActionBar_barActionBtnColor, Color.BLUE)
         mActionBtnText = arr.getString(R.styleable.OneActionBar_barActionBtnText)
-        mActionBtnTextSize = arr.getDimension(R.styleable.OneActionBar_barActionBtnTextSize, sp2px(12f).toFloat())
+        mActionBtnTextSize =
+            arr.getDimension(R.styleable.OneActionBar_barActionBtnTextSize, sp2px(12f).toFloat())
         mBottomLineWidth = arr.getDimension(R.styleable.OneActionBar_barBottomLineWidth, 0f)
         mBottomLineColor = arr.getColor(R.styleable.OneActionBar_barBottomLineColor, Color.DKGRAY)
         mActionBtnIconDrawable = arr.getDrawable(R.styleable.OneActionBar_barActionBtnIcon)
-        mActionBtnIconWidth = arr.getDimension(R.styleable.OneActionBar_barActionBtnIconWidth, 0f).toInt()
-        mActionBtnIconHeight = arr.getDimension(R.styleable.OneActionBar_barActionBtnIconHeight, 0f).toInt()
+        mActionBtnIconWidth =
+            arr.getDimension(R.styleable.OneActionBar_barActionBtnIconWidth, 0f).toInt()
+        mActionBtnIconHeight =
+            arr.getDimension(R.styleable.OneActionBar_barActionBtnIconHeight, 0f).toInt()
         mSearchBackground = arr.getDrawable(R.styleable.OneActionBar_barSearchBackground)
         if (mSearchBackground == null) {
             mSearchBackground = getDrawable(context, R.drawable.bg_search_input)
         }
         mSearchHint = arr.getString(R.styleable.OneActionBar_barSearchHint)
         mSearchText = arr.getString(R.styleable.OneActionBar_barSearchText)
-        mSearchHintColor = arr.getColor(R.styleable.OneActionBar_barSearchHintColor, Color.parseColor("#e1e1e1"))
+        mSearchHintColor =
+            arr.getColor(R.styleable.OneActionBar_barSearchHintColor, Color.parseColor("#e1e1e1"))
         mSearchTextColor = arr.getColor(R.styleable.OneActionBar_barSearchTextColor, Color.BLACK)
-        mSearchTextSize = arr.getDimension(R.styleable.OneActionBar_barSearchTextSize, sp2px(16f).toFloat())
+        mSearchTextSize =
+            arr.getDimension(R.styleable.OneActionBar_barSearchTextSize, sp2px(16f).toFloat())
     }
 
     /**
