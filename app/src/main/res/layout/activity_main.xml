@@ -8,11 +8,10 @@
         android:paddingTop="30dp"
         android:orientation="vertical">
 
-    <cn.onestravel.one.actionbar.OneActionBar
-            style="@style/OneActionBar.Normal"
+    <cn.onestravel.one.actionbar.OneToolBar
+            style="@style/OneActionBar.Normal.Blue"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@android:color/white"
             app:barTitle="首页" />
 
     <TextView

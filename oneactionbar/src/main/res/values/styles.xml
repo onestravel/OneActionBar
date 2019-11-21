@@ -12,16 +12,16 @@
     <style name="OneActionBar.Normal.White" parent="OneActionBar.Normal">
         <item name="android:background">@android:color/white</item>
         <item name="barTitleColor">@android:color/black</item>
-        <item name="barActionBtnColor">#0080ff</item>
+        <item name="barActionBtnColor">@color/one_action_color_blue</item>
     </style>
     <style name="OneActionBar.Normal.Blue" parent="OneActionBar.Normal">
-        <item name="android:background">#0080ff</item>
+        <item name="android:background">@color/one_action_color_blue</item>
         <item name="barTitleColor">@android:color/white</item>
         <item name="barActionBtnColor">@android:color/white</item>
     </style>
 
     <style name="OneActionBar.Normal.Green" parent="OneActionBar.Normal">
-        <item name="android:background">@android:color/holo_green_dark</item>
+        <item name="android:background"></item>
         <item name="barTitleColor">@android:color/white</item>
         <item name="barActionBtnColor">@android:color/white</item>
     </style>
@@ -29,23 +29,23 @@
     <style name="OneActionBar.Back" parent="OneActionBar.Normal">
         <item name="barType">TYPE_BACK</item>
         <item name="barBackTextSize">14sp</item>
-        <item name="barBackText">返回</item>
+        <item name="barBackText">@string/back_text</item>
     </style>
     <style name="OneActionBar.Back.White" parent="OneActionBar.Back">
         <item name="android:background">@android:color/white</item>
         <item name="barBackColor">@android:color/black</item>
         <item name="barTitleColor">@android:color/black</item>
-        <item name="barActionBtnColor">#0080ff</item>
+        <item name="barActionBtnColor">@color/one_action_color_blue</item>
     </style>
     <style name="OneActionBar.Back.Blue" parent="OneActionBar.Back">
-        <item name="android:background">#0080ff</item>
+        <item name="android:background">@color/one_action_color_blue</item>
         <item name="barBackColor">@android:color/white</item>
         <item name="barTitleColor">@android:color/white</item>
         <item name="barActionBtnColor">@android:color/white</item>
     </style>
 
     <style name="OneActionBar.Back.Green" parent="OneActionBar.Back">
-        <item name="android:background">@android:color/holo_green_dark</item>
+        <item name="android:background">@color/one_action_color_green</item>
         <item name="barBackColor">@android:color/white</item>
         <item name="barTitleColor">@android:color/white</item>
         <item name="barActionBtnColor">@android:color/white</item>
@@ -59,17 +59,17 @@
         <item name="android:background">@android:color/white</item>
         <item name="barBackColor">@android:color/black</item>
         <item name="barTitleColor">@android:color/black</item>
-        <item name="barActionBtnColor">#0080ff</item>
+        <item name="barActionBtnColor">@color/one_action_color_blue</item>
     </style>
     <style name="OneActionBar.Search.Blue" parent="OneActionBar.Search">
-        <item name="android:background">#0080ff</item>
+        <item name="android:background">@color/one_action_color_blue</item>
         <item name="barBackColor">@android:color/white</item>
         <item name="barTitleColor">@android:color/white</item>
         <item name="barActionBtnColor">@android:color/white</item>
     </style>
 
     <style name="OneActionBar.Search.Green" parent="OneActionBar.Search">
-        <item name="android:background">@android:color/holo_green_dark</item>
+        <item name="android:background">@color/one_action_color_green</item>
         <item name="barBackColor">@android:color/white</item>
         <item name="barTitleColor">@android:color/white</item>
         <item name="barActionBtnColor">@android:color/white</item>
@@ -83,19 +83,20 @@
         <item name="android:background">@android:color/white</item>
         <item name="barBackColor">@android:color/black</item>
         <item name="barTitleColor">@android:color/black</item>
-        <item name="barActionBtnColor">#0080ff</item>
+        <item name="barActionBtnColor">@color/one_action_color_blue</item>
     </style>
     <style name="OneActionBar.Back.Search.Blue" parent="OneActionBar.Back.Search">
-        <item name="android:background">#0080ff</item>
+        <item name="android:background">@color/one_action_color_blue</item>
         <item name="barBackColor">@android:color/white</item>
         <item name="barTitleColor">@android:color/white</item>
         <item name="barActionBtnColor">@android:color/white</item>
     </style>
 
     <style name="OneActionBar.Back.Search.Green" parent="OneActionBar.Back.Search">
-        <item name="android:background">@android:color/holo_green_dark</item>
+        <item name="android:background">@color/one_action_color_green</item>
         <item name="barBackColor">@android:color/white</item>
         <item name="barTitleColor">@android:color/white</item>
         <item name="barActionBtnColor">@android:color/white</item>
     </style>
+
 </resources>

@@ -7,7 +7,6 @@ apply from: '../jcenter_publish.gradle'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
-    resourcePrefix "one_" //资源标识前缀 随意填写
 
     defaultConfig {
         minSdkVersion 14
