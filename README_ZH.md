@@ -4,14 +4,14 @@
 
 
 
-[English Document](README.md)
+[English Document](https://github.com/onestravel/OneActionBar/README.md)
 
 ## 简介
 **自定义ActionBar，支持属性，java代码方式配置，可实现标题，标题带返回键，搜索，搜索带返回键的ActionBar；配置简单，方便使用，可适应大多数场景。**
 
 ## 效果图
 
-###![效果图](/images/20190825/image-20190915194738463.png)
+###![效果图](https://github.com/onestravel/OneActionBar/images/20190825/image-20190915194738463.png)
 
 1. 标准标题头，背景透明 ``style="@style/OneActionBar.Normal"``
 2. 标准标题头，蓝色背景 ``style="@style/OneActionBar.Normal.Blue"``
@@ -24,7 +24,23 @@
 
 ## 引入方式
 
-TAG:     [![](https://jitpack.io/v/onestravel/OneActionBar.svg)](https://jitpack.io/#onestravel/OneActionBar)
+### jcenter
+
+VERSION:[ ![Download](https://api.bintray.com/packages/onestravel/one/OneActionBar/images/download.svg) ](https://bintray.com/onestravel/one/OneActionBar/_latestVersion)
+- Add dependencies in build.gradle in model
+
+```
+dependencies {
+    implementation 'cn.onestravel.one:one_actionbar:VERSION'
+}
+
+```
+
+
+
+### jitpack
+
+VERSION:     [![](https://jitpack.io/v/onestravel/OneActionBar.svg)](https://jitpack.io/#onestravel/OneActionBar)
 
 #### gradle
 
@@ -44,7 +60,7 @@ TAG:     [![](https://jitpack.io/v/onestravel/OneActionBar.svg)](https://jitpack
 
 ```
 dependencies {
-	implementation 'com.github.onestravel:OneActionBar:TAG'
+	implementation 'com.github.onestravel:OneActionBar:VERSION'
 }
 
 ```
@@ -89,7 +105,7 @@ dependencies {
 3. 带返回键标题头，透明背景 ``style="@style/OneActionBar.Back"``
 4. 带返回键标题头，蓝色背景 ``style="@style/OneActionBar.Back.Blue"``
 5. 带搜索框标题头，透明背景 ``style="@style/OneActionBar.Search"``
-6. 带搜索框标题头，蓝色背景 ``style="@style/OneActionBar.Search.Blue"
+6. 带搜索框标题头，蓝色背景 ``style="@style/OneActionBar.Search.Blue"``
 7. 搜索框带返回键标题头，透明背景 ``style="@style/OneActionBar.Back.Search"``
 8. 搜索框带返回键标题头，蓝色背景 ``style="@style/OneActionBar.Back.Search.Blue"``
 

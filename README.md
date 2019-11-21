@@ -4,7 +4,7 @@
 
 
 
-[中文文档](README_ZH.md) 
+[中文文档](README_ZH.md)
 
 ## Introduction
 
@@ -25,18 +25,34 @@
 
 ## Introduction method
 
-TAG: [![](https://jitpack.io/v/onestravel/OneActionBar.svg)](https://jitpack.io/#onestravel/OneActionBar)
+### jcenter
+
+VERSION:[ ![Download](https://api.bintray.com/packages/onestravel/one/OneActionBar/images/download.svg) ](https://bintray.com/onestravel/one/OneActionBar/_latestVersion)
+- Add dependencies in build.gradle in model
+
+```
+dependencies {
+    implementation 'cn.onestravel.one:one_actionbar:VERSION'
+}
+
+```
+
+
+
+### jitpack
+
+VERSION: [![](https://jitpack.io/v/onestravel/OneActionBar.svg)](https://jitpack.io/#onestravel/OneActionBar)
 
 #### gradle
 
 - Add the following configuration to build.gradle (same level as model) in the root directory of the project
 
 ```
-Allprojects {
-Repositories {
-...
-Maven { url 'https://jitpack.io' }
-}
+allprojects {
+    repositories {
+    ...
+        maven { url 'https://jitpack.io' }
+    }
 }
 
 ```
@@ -44,8 +60,8 @@ Maven { url 'https://jitpack.io' }
 - Add dependencies in build.gradle in model
 
 ```
-Dependencies {
-Implementation 'com.github.onestravel:OneActionBar:TAG'
+dependencies {
+    implementation 'com.github.onestravel:OneActionBar:VERSION'
 }
 
 ```
@@ -90,7 +106,7 @@ Note: The label corresponds to the picture effect number
 3. With return key header, transparent background ``style="@style/OneActionBar.Back"``
 4. With the return key head, blue background ``style="@style/OneActionBar.Back.Blue"``
 5. With search box header, transparent background ``style="@style/OneActionBar.Search"``
-6. With search box header, blue background ``style="@style/OneActionBar.Search.Blue"
+6. With search box header, blue background ``style="@style/OneActionBar.Search.Blue"``
 7. Search box with return key header, transparent background ``style="@style/OneActionBar.Back.Search"``
 8. Search box with return key header, blue background ``style="@style/OneActionBar.Back.Search.Blue"``
 
@@ -100,11 +116,11 @@ Note: The label corresponds to the picture effect number
 
 ```xml
 <cn.onestravel.one.actionbar.OneActionBar
-        Style="@style/OneActionBar.Back.Blue"
-        Android:layout_width="match_parent"
-        Android:layout_height="50dp"
-        App:barActionBtnText="Next"
-        App:barTitle="Questionnaire" />
+        style="@style/OneActionBar.Back.Blue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:barActionBtnText="Next"
+        app:barTitle="Questionnaire" />
 ```
 
 2. style
