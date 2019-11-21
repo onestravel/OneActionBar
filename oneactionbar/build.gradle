@@ -2,11 +2,12 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+apply from: '../jcenter_publish.gradle'
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
-
+    resourcePrefix "one_" //资源标识前缀 随意填写
 
     defaultConfig {
         minSdkVersion 14
@@ -23,6 +24,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    lintOptions {
+        abortOnError false
     }
 
 }
